@@ -1,0 +1,70 @@
+/* PANEL LATERAL (se ve a la izquierda de la pantalla)*/
+.panel-lateral {
+    width: 260px;
+    height: 97vh;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: black;
+    padding: 25px;
+    box-sizing: border-box;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Nombre del usuario */
+.nombre-usuario {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Nombre del rol */
+.nombre-rol {
+    font-size: 14px;
+    font-style: italic;
+    color: #444;
+    margin-bottom: 35px;
+}
+
+/* OPCIONES */
+.opcion-menu {
+    margin: 18px 0;
+    font-size: 18px;
+}
+
+.opcion-menu a {
+    text-decoration: none;
+    color: #222;
+}
+
+/* Efecto cuando se pasa el cursor */
+.opcion-menu a:hover {
+    color: #000;
+    margin-left: 5px;
+    transition: 0.1s;
+}
+
+/* CERRAR SESIÓN */
+.cerrar-sesion {
+    margin-top: auto;
+    font-size: 17px;
+}
+
+.cerrar-sesion a {
+    color: #c62828;
+    text-decoration: none;
+}
+
+.cerrar-sesion a:hover {
+    color: #ff4444;
+}
+
+/* ZONA CONTENIDO */
+.zona-contenido {
+    margin-left: 0px;
+    padding: 0px;
+    font-family: Arial;
+}

@@ -1,0 +1,241 @@
+/* 
+Contenedor que contiene todo lo que no es el panel de opciones
+(normalmente será la parte derecha de la pantalla) 
+*/
+.zona-contenido {
+    margin-left: 50px;
+    min-height: 97vh;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+/* Contenedor que aplica efecto difuminado al fondo */
+.contenedor-difuminado {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    width: 92%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+/* Título principal de la página actual */
+.titulo-dashboard {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #111;
+}
+/* -----------------------------------------------------------------------------------------*/
+/* Componentes de las interfaces tipo principal_[...].php */
+.grid-estadisticas {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+}
+
+/* Cajas que contendrán estadísticas */
+.caja-estado {
+    width: 260px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.25);
+    text-align: center;
+}
+
+/* Número en grande */
+.numero-grande {
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+/* Texto de las cajas que contienen estadísticas */
+.texto-caja {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+/* -----------------------------------------------------------------------------------------*/
+/* Botón genérico que permite hacer acciones */
+.boton-gestion {
+    width: 100%;
+    padding: 12px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.boton-gestion:hover {
+    background: #333;
+}
+
+/* -----------------------------------------------------------------------------------------*/
+/* Componentes creados para panel_ayuntamiento/gestionar_colonias.php que serán reutilizables
+en otras páginas similares */
+
+.boton-crear {
+    width: 220px;
+    margin-bottom: 25px;
+}
+
+/* Tabla */
+.tabla-colonias {
+    border: 3px solid #333; 
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0; /* controlamos los bordes por celda */
+    background: transparent;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    border-radius: 18px;
+    overflow: hidden; /* hace que el borde redondeado recorte el contenido */
+}
+
+.tabla-colonias thead th {
+    background: #000;
+    color: #fff;
+    padding: 14px;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* Celdas de la tabla */
+.tabla-colonias tbody td {
+    background: rgba(255,255,255,0.95);
+    padding: 12px 14px;
+    border-bottom: 1px solid #e6e6e6; /* Separador horizontal */
+}
+
+/* Separador vertical: aplicarlo a todas menos la última celda */
+.tabla-colonias tbody td:not(:last-child) {
+    border-right: 1px solid #e6e6e6;
+}
+
+/* Efecto aplicado para cada celda impar (ayuda a legibilidad) */
+.tabla-colonias tbody tr:nth-child(even) td {
+    background: rgba(250,250,250,0.95);
+}
+
+/* Efecto aplicado al pasar el cursor */
+.tabla-colonias tbody tr:hover td {
+    background: rgba(245,245,245,0.98);
+}
+
+/* Bordes redondeados en las esquinas de la tabla */
+.tabla-colonias thead th:first-child { border-top-left-radius: 12px; }
+.tabla-colonias thead th:last-child { border-top-right-radius: 12px; }
+
+
+/* Botones pequeños, normalmente usados en tablas */
+.boton-mini {
+    padding: 8px 14px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: #000;
+    color: white;
+    margin-right: 6px;
+}
+
+.boton-mini:hover {
+    background: #333;
+}
+
+.acciones-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Si la tabla está dentro del contenedor-difuminado, se añade separación arriba */
+.contenedor-difuminado .tabla-colonias {
+    margin-top: 10px;
+}
+
+/* -----------------------------------------------------------------------------------------*/
+/* Para formularios (de crear una nueva colonia o editar una existente),
+serán reutilizados para otros programas. */
+
+.formulario-colonia {
+    max-width: 500px;
+    margin: 0 auto; /* Centrar el formulario dentro del contenedor */
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column; /* Apilar elementos verticalmente */
+}
+
+.formulario-colonia label {
+    display: block; /* Asegura que cada label esté en su propia línea */
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #333;
+}
+
+.formulario-colonia input[type="text"] {
+    width: 100%; /* Ocupa el 100% del contenedor .formulario-colonia */
+    padding: 12px;
+    margin-bottom: 5px; /* Reducimos el margen inferior ya que la siguiente label lo tiene arriba */
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+/* Efecto al enfocar el campo de texto */
+.formulario-colonia input[type="text"]:focus {
+    border-color: #000;
+    outline: none;
+}
+
+/* Botón de Confirmar */
+.boton-confirmar {
+    width: 100%;
+    margin-top: 30px;
+}
+
+/* Estilo para mensajes de confirmación/error */
+.mensaje-alerta {
+    text-align: center; 
+    font-weight: bold; 
+    padding: 10px; 
+    border-radius: 8px; 
+    color: #fff; 
+    margin-bottom: 20px;
+}
+
+.mensaje-exito {
+    background-color: #4CAF50; 
+}
+
+.mensaje-error {
+    background-color: #F44336;
+}
+
+/* Estilo para campos de selección (select) */
+.select-campo {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    background: white;
+    color: #444;
+}
