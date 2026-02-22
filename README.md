@@ -19,3 +19,11 @@ This folder contains the final project of the Database II subject, which I took 
 It consists of the creation of a web that allows users and volunteers help complete tasks related to the maintenance of cat colonies in Mallorca. The web also includes different profile management, since users can be classified as Volunteers, Volunteer Group Leader, Town Hall member and Vets, each one with its unique UI and functionalities. The database to store and query all the necessary information is also created using PhpMyAdmin and MySQL as the DBMS chosen.
 This project puts into practice different important DB concepts: transactions, procedures, triggers, queries, events...
 Technologies used: PHP, HTML, CSS, SQL.
+
+## Others
+Several other projects regarding assembly language, system evaluation, programming, concurrent access to data, etc. haven't been included yet.
+
+## License
+This project is licensed under the MIT License.
+These projects are shared for educational and portfolio purposes.
+Please do not submit them as academic work.
