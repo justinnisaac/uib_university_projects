@@ -27,3 +27,6 @@ Several other projects regarding assembly language, system evaluation, programmi
 This project is licensed under the MIT License.
 These projects are shared for educational and portfolio purposes.
 Please do not submit them as academic work.
+
+
+© 2026 Justin Isaac – University Projects Portfolio
