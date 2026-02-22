@@ -30,3 +30,6 @@ Please do not submit them as academic work.
 
 
 © 2026 Justin Isaac – University Projects Portfolio
+
+## LinkedIn
+www.linkedin.com/in/justin-isaac-muñoz-ordoñez-44b9863b1
